@@ -1,0 +1,117 @@
+
+:root{
+    --primary-color: #4071ED;
+    --secondary-color: #F0EEF0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.swiper-wrapper{
+    padding: 80px 0px;
+}
+section#slider_section{
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#slider_section .container{
+    width: 95%;
+    margin: auto;
+}
+.card_img img {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 2px solid white;
+    transform: scale(.8);
+    transition: .4s;
+}
+.card_img {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+    background: var(--primary-color);
+    border-radius: 0px 0px 0px 25px;
+    position: relative;
+    perspective: 800px;
+    perspective-origin: center bottom;
+    transition: .3s;
+}
+
+.content_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    background: white;
+}
+
+.content_side p {
+    text-align: center;
+    margin: 30px 0px;
+    line-height: 1.6;
+    color: #777;
+    font-size: 14px;
+}
+
+.single-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 30px -20px, rgba(0, 0, 0, 0.3) 0px 0px 60px -30px, rgba(10, 37, 30, 0.35) 0px -2px 6px 0px;
+    transition: .4s;
+}
+
+.card_img:before, .card_img:after {
+    content: " ";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 0px;
+    bottom: -45px;
+    background: var(--primary-color);
+    border-radius: 0px;
+}
+.card_img:after{
+    background: white;
+    border-radius: 0px 25px 0px 0px;
+ 
+   
+}
+.content_side a {
+    text-decoration: none;
+    color: white;
+    background: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+
+.content_side h3 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.content_side a:hover {
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: .3s;
+}
+.card_img:hover {
+    perspective: none;
+}
+
+.single-card:hover .card_img img {
+    transform: scale(1);
+    transition: .6s;
+}
